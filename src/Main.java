@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] array = {3, 6, 8, 6, 2, 1, 9, 4};
+        int[] array = {3, 6, 6, 6, 2, 1, 9, 4};
 
         boolean found = false;
 
@@ -24,6 +24,7 @@ public class Main {
                 System.out.println("Find value in position " + i);
                 System.arraycopy(array, i + 1, array, i, array.length - 1 - i);
                 array[array.length - 1] = 0;
+                i--;
                 System.out.println("New array:");
                 for (int k : array) {
                     System.out.print(k + "\t");
